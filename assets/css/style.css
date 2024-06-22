@@ -238,7 +238,53 @@ h4 {
     color: #ffffff;
     transform: rotate(180deg);
   }
+  .navmenu .dropdown ul {
+    position: static;
+    display: none;
+    z-index: 99;
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color:  #82aaaa;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navmenu .dropdown ul ul {
+    background-color: rgba(33, 37, 41, 0.1);
+  }
+
+  .navmenu .dropdown>.dropdown-active {
+    display: block;
+    background-color: rgba(33, 37, 41, 0.03);
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    color: #fff;
+    position: absolute;
+    font-size: 32px;
+    top: 15px;
+    right: 15px;
+    margin-right: 0;
+    z-index: 9999;
+  }
+
+  .mobile-nav-active .navmenu {
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    background: rgba(33, 37, 41, 0.8);
+    transition: 0.3s;
+  }
+
+  .mobile-nav-active .navmenu>ul {
+    display: block;
+  }
 }
+
+
 /*
 # Footer
 */
@@ -646,6 +692,7 @@ section,
   background-color: #000000;
   position: relative;
   padding: 120px 0;
+  margin-top: 40px;
 }
 
 .stats img {
@@ -691,14 +738,13 @@ section,
   color: color-mix(in srgb, #212529, transparent 40%);
 }
 
-/*
-# Menu Section
-*/
+
 /*
 # Testimonials Section
 */
 .testimonials {
   background-color: color-mix(in srgb, #212529, transparent 94%);
+  margin-top: 40px;
 }
 
 .testimonials .testimonial-item .testimonial-content {
@@ -764,10 +810,11 @@ section,
 }
 
 /*
-# Events Section
+# Templates
 */
 .events .container-fluid {
   padding: 0;
+  margin-top: 40px;
 }
 
 .events .event-item {
@@ -820,21 +867,19 @@ section,
   margin-top: 20px;
   position: relative;
 }
-
-/*
-# Chefs Section
-*/
-/*
-# Book A Table Section
-*/
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.events .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: color-mix(in srgb, #212529, transparent 85%);
+  opacity: 1;
 }
+
+.events .swiper-pagination .swiper-pagination-bullet-active {
+  background-color:  #82aaaa;
+}
+
+
+
 /*
 # Gallery Section
 */
@@ -852,9 +897,34 @@ section,
   position: relative;
 }
 
+.gallery .swiper-pagination .swiper-pagination-bullet {
+  background-color: color-mix(in srgb,  #212529 , transparent 85%);
+  border: 0;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+.gallery .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #82aaaa;
+  opacity: 1;
+}
+
+.gallery .swiper-slide-active {
+  text-align: center;
+}
+
 @media (min-width: 992px) {
   .gallery .swiper-wrapper {
     padding: 40px 0;
+  }
+  .gallery .swiper-slide-active {
+    background: #ffffff;
+    border: 6px solid #82aaaa;
+    padding: 4px;
+    z-index: 1;
+    transform: scale(1.2);
+    transition: none;
   }
 }
 /*
