@@ -2,8 +2,6 @@ body {
   color: #212529;
   background-color: #ffffff;
   font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  width: 100%;
-  overflow-x: hidden;
 }
 
 a {
@@ -78,9 +76,6 @@ h4 {
   background: color-mix(in srgb, #82aaaa, transparent 15%);
 }
 
-.profile-img {
-  border-radius: 30%;
-}
 
 .img-fluid {
   border-radius: 30%;
@@ -535,6 +530,11 @@ section,
   background: color-mix(in srgb, #82aaaa, transparent 15%);
   box-shadow: 0 8px 28px color-mix(in srgb, #82aaaa, transparent 55%);
 }
+
+.hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
 
 @media (max-width: 640px) {
   .hero h1 {
@@ -1343,6 +1343,7 @@ img {
 
 .order-1 {
   order: 1 !important;
+  border-width: 1px !important
 }
 
 .order-2 {
